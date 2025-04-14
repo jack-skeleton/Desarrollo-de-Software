@@ -110,4 +110,25 @@ output "db_endpoint" {
 
 ### B. Contenerización y despliegue de aplicaciones modernas
 
+#### 1 Contenerización de una aplicación con Docker
 
+- ¿Qué son los contenedores?
+  
+  Tienen la característica de empaquetar una aplicación con todas sus dependencias. Mientras que las máquins virtuales no requieren de un sistema operativo. 
+  
+- Dockerfile
+
+  El archivo el cual llega a definir como construir una imagen Docker, la cual su estructura básica es:
+
+  
+``` yaml
+From node:18
+WORKDIR /app
+COPY
+RUN npm install
+CMD ["npm", "start"]
+```
+ 
+- Imagen vs Contenedor  
+  * **imagen:** Una plantilla la cual son solo de lectura, estas tienen instrucciones para la creación de un contenedor. 
+  * **contenedor:** 
